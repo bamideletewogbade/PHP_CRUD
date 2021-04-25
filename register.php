@@ -1,7 +1,9 @@
+<?php session_start(); ?>
 <!DOCTYPE html>
 <html>
 <head>
 	<title>Registration Page</title>
+  <link rel="stylesheet" type="text/css" href="register_style.css">
 </head>
 <body>
 <h1 style="text-align: center;">👋 Hello, Welcome to the Zuri Basic Authentification Page</h1>
@@ -12,15 +14,15 @@
     <p style="text-align: center;">Please fill in this form to create an account.</p>
     <hr>
 
-    <label for="email"><b>Email</b></label>
-    <input type="text" placeholder="Enter Email" name="email" id="email" required autocomplete="off">
+    
+    <input type="text" placeholder="Enter Username" name="username" id="username" required autocomplete="off">
     <br>
     <br>
-    <label for="password"><b>Password</b></label>
+    
     <input type="password" placeholder="Enter Password" name="password" id="password" required autocomplete="off">
     <br>
     <br>
-    <label for="password-repeat"><b>Repeat Password</b></label>
+    
     <input type="password" placeholder="Repeat Password" name="password-repeat" id="password-repeat" required autocomplete="off">
     <hr>
 
@@ -29,7 +31,7 @@
   </div>
 
   <div class="container signin">
-    <p style="text-align: center;">Already have an account? <a style = "color:#46A049" href="#">Sign in</a>.</p>
+    <p style="text-align: center;">Already have an account? <a style = "color:#46A049" href="login.php">Sign in</a>.</p>
   </div>
 </form>
 </body>
