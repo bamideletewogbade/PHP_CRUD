@@ -8,7 +8,7 @@
 	<h1 style="text-align: center; color:#02393E">Password reset</h1>
 <hr>
 <br>
-<form action="login_process.php" method="post" style="text-align: center;" autocomplete="off">
+<form action="reset_process.php" method="post" style="text-align: center;" autocomplete="off">
   <div class="container">
     
     <input type="text" placeholder="Enter new password" name="password" required autocomplete="off">

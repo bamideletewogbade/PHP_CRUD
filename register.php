@@ -8,7 +8,7 @@
 <body>
 <h1 style="text-align: center;">👋 Hello, Welcome to the Zuri Basic Authentification Page</h1>
 <br>
-<form action="register_process.php" style="text-align: center;">
+<form action="register_process.php" method = "POST" style="text-align: center;">
   <div class="container">
     <h1 style="text-align: center;">Register</h1>
     <p style="text-align: center;">Please fill in this form to create an account.</p>
@@ -23,11 +23,11 @@
     <br>
     <br>
     
-    <input type="password" placeholder="Repeat Password" name="password-repeat" id="password-repeat" required autocomplete="off">
+    <input type="password" placeholder="Repeat Password" name="c_password" id="c_password" required autocomplete="off">
     <hr>
 
     <p style="text-align: center;">By creating an account you agree to our <a href="#">Terms & Privacy</a>.</p>
-    <button type="submit" class="registerbtn">Register</button>
+    <input type="submit" class="registerbtn" name="submit" value="Register">
   </div>
 
   <div class="container signin">

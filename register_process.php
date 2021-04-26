@@ -1,26 +1,26 @@
-<?php session_start(); 
-$con = mysqli_connect('localhost','root','','zuriauth');
+<?php
+$servername = "localhost";
+$username = "root";
+$password = "";
+$dbname = "zuriauth";
 
-
-
-$name = $_POST['username'];
-$password = $_POST['password'];
-
-$sql ="SELECT * FROM user_reg WHERE username ='$name'";
-$result = mysqli_query($con,$sql);
-
-$num = mysqli_num_rows($result);
-
-if($num == 1){
-    echo "Username Already Taken";
-    echo "Please select a different username";
+// Create connection
+$conn = new mysqli($servername, $username, $password, $dbname);
+// Check connection
+if ($conn->connect_error) {
+  die("Connection failed: " . $conn->connect_error);
 }
-else{
-    $reg = "INSERT INTO users_reg(username , password) VALUES ('$name' , '$password')";
-    mysqli_query($con,$reg);
-    echo "Registration Successful";
-   
+$user = $_POST['username'];
+$pass = $_POST['password'];
+
+$sql = "INSERT INTO user_reg (name, password)
+VALUES ('$user', '$pass')";
+
+if ($conn->query($sql) === TRUE) {
+  echo "New record created successfully";
+} else {
+  echo "Error: " . $sql . "<br>" . $conn->error;
 }
-echo "Registration Successful";
- header("location:login.php");
+
+$conn->close();
 ?>
