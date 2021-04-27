@@ -23,6 +23,10 @@ session_start();
     <button style="width: 50%" type="submit" name="submit" class="registerbtn">Login</button>
     <br>
   </div>
+  <hr>
+  <!--<div class="container">
+    <button style="width: 50%" type="submit" name="submit" class="registerbtn">Logout</button>
+  </div>-->
 <hr>
   <div class="container" style="background-color:#f1f1f1">
     Forgot Password? <span class="psw"><a href="reset_password.php">Click to reset password</a></span>
